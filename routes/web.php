@@ -24,5 +24,9 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
-    })->name('dashboard');
+    })->name('dashboard'); 
+    
+    Route::get('/activacion', [ActivacionController::class, 'mostrarFormulario'])->name('activacion.mostrar');
+    Route::post('/activacion', [ActivacionController::class, 'procesarFormulario'])->name('activacion.procesar');
 });
+
