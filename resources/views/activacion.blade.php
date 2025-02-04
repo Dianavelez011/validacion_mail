@@ -22,7 +22,7 @@
             </div>
         @endif
 
-        <form action="{{ route('activacion.procesar') }}" method="POST">
+        <form action="{{ route('procesar.procesar') }}" method="POST">
             @csrf
             <div class="mb-3">
                 <label for="regional" class="form-label">Regional</label>

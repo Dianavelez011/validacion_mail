@@ -54,7 +54,7 @@ class ActivacionController extends Controller
             // Procesar la activación del usuario (guardar en la base de datos, etc.)
             // ...
 
-            return redirect()->route('activacion.mostrar')->with('success', 'Usuario activado correctamente.');
+            return redirect()->route('activacion')->with('success', 'Usuario activado correctamente.');
         } else {
             return back()->with('error', 'No se pudo validar la información del contrato.');
         }

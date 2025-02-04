@@ -1,6 +1,7 @@
-<?php
+<?php 
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ActivacionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +27,9 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard'); 
     
-    Route::get('/activacion', [ActivacionController::class, 'mostrarFormulario'])->name('activacion.mostrar');
-    Route::post('/activacion', [ActivacionController::class, 'procesarFormulario'])->name('activacion.procesar');
+    // Ruta para mostrar el formulario
+    Route::get('/activacion', [ActivacionController::class, 'mostrarFormulario'])->name('activacion');
+    
+    // Ruta para procesar el formulario (si necesitas esta ruta)
+    Route::post('/procesar', [ActivacionController::class, 'procesarFormulario'])->name('procesar.procesar');
 });
-
