@@ -68,10 +68,6 @@
                 <label for="usuario" class="form-label">Usuario</label>
                 <input type="text" class="form-control" id="usuario" name="usuario" required>
             </div>
-            <div class="mb-3">
-                <label for="nemotecnia" class="form-label">Nemotecnia</label>
-                <input type="text" class="form-control" id="nemotecnia" name="nemotecnia" required>
-            </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
     </div>

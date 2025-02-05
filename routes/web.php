@@ -28,8 +28,8 @@ Route::middleware([
     })->name('dashboard'); 
     
     // Ruta para mostrar el formulario
-    Route::get('/activacion', [ActivacionController::class, 'mostrarFormulario'])->name('activacion');
+    Route::get('/activacion', [ActivacionController::class, 'mostrarFormulario'])->middlew¿are('permission:contratista')->name('activacion');
     
     // Ruta para procesar el formulario (si necesitas esta ruta)
-    Route::post('/procesar', [ActivacionController::class, 'procesarFormulario'])->name('procesar.procesar');
+    Route::post('/procesar', [ActivacionController::class, 'procesarFormulario'])->middleware('permission:contratista')->name('procesar.procesar');
 });
